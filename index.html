@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image Gallery</h1>
+            <div class="controls">
+                <input type="text" id="search" placeholder="Search images...">
+                <select id="filter">
+                    <option value="all">All Categories</option>
+                    <option value="nature">Nature</option>
+                    <option value="architecture">Architecture</option>
+                    <option value="people">People</option>
+                    <option value="animals">Animals</option>
+                </select>
+            </div>
+        </header>
+        
+        <div class="gallery" id="gallery">
+            <!-- Images will be loaded here -->
+        </div>
+        
+        <div class="lightbox" id="lightbox" style="display: none;">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-controls">
+                <button onclick="prevImage()">&#10094;</button>
+                <button onclick="nextImage()">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
